@@ -1,1 +1,19 @@
-
+name: Deploy server
+on:
+  push:
+    branches:
+      - main
+jobs:
+  web-deploy:
+    name: Deploying
+    runs-on: ubuntu-latest
+    steps:
+    - name: taking the latese version of code
+      uses: actions/checkout@v2
+    - name: downloading changed filea
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ftpupload.net
+        server-dir: htdocs/
+        username: epiz_30883650
+        password: ${{ secrets.PASSWORD }}
