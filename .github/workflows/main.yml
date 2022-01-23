@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   web-deploy:
-    name: Deploy
+    name: Deploying
     runs-on: ubuntu-latest
     steps:
     - name: taking the latese version of code
