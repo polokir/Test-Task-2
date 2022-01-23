@@ -1,6 +1,6 @@
-<<?php
+<?php
 $file='names.txt';
-$data=fopen("names.txt", a+);
+$data=fopen("names.txt", 'a+');
 $name= htmlentities($_POST["userName");
 $surname=htmlentities($_POST["userSurname");
 if(is_file($file)){
@@ -9,7 +9,7 @@ if(is_file($file)){
 		$IsSearched=true;
 		foreach ($datatext as $text) {
 			# code...
-			if(preg_match('/^'.$name. '/ius', $text) and preg_match('/^'.$surename. '/ius', $text)){
+			if(preg_match('/^'.$name. '/ius', $text) and preg_match('/^'.$surname. '/ius', $text)){
 				$IsSearched=false;
 				break;
 			}
@@ -20,20 +20,19 @@ if(is_file($file)){
             fseek($data, 0, SEEK_END);
             fwrite($data, $name);
             fwrite($data, " ");
-            fwrite($data, $surename);
+            fwrite($data, $surname);
             fwrite($data, "\n");
             fseek($data, 0, SEEK_END);
             fclose($data);
-            echo "<p style='margin-left: .5em;'></p>","<form action= ><button><i>Повернутись на головну</i></button></form>";
+            echo "<p style='margin-left: .5em;'></p>","<form action=http://kiril-polozhenets.42web.io/ ><button><i>Повернутись на головну</i></button></form>";
 		}
 	}else{
 		echo 'Вже бачилися, '. $name;
-            echo "<p style='margin-left: .5em;'></p>","<form action= ><button><i>Повернутись на головну</i></button></form>";
+            echo "<p style='margin-left: .5em;'></p>","<form action=http://kiril-polozhenets.42web.io/ ><button><i>Повернутись на головну</i></button></form>";
 	}
 else{
       echo"Перевірте введені символи";
-       echo "<p style='margin-left: .5em;'></p>","<form action= ><button><i>Повернутись на головну</i></button></form>";
+       echo "<p style='margin-left: .5em;'></p>","<form action=http://kiril-polozhenets.42web.io/ ><button><i>Повернутись на головну</i></button></form>";
  	}
 }
-
- ?>
+?>
