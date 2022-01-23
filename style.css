@@ -1,0 +1,42 @@
+header {
+	text-align: center;
+  background: #1f304e;
+  height: 70px;
+}
+
+body{
+	background: #1f304e;
+}
+
+.mainform{
+  background: #F9F9F9;
+  height: 100%;
+  text-align: center;
+  background: #1f304e;
+}
+
+.button-form{
+	text-align: center;
+}
+
+.showAll{
+	text-align: center;
+}
+
+footer{
+	text-align: center;
+	color: #fdfbf9;
+	font-family: 'Arial';
+	
+}
+
+.uper{
+	text-align: center;
+	font-family: 'Arial';
+	color: #fdfbf9;
+	
+}
+
+.ending {
+
+  }
